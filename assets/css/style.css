@@ -1,0 +1,32 @@
+/* Asterisk wildcard selector to override default styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.heading {
+    text-align: center;
+    font-size: 3rem;
+    display: flex; /* Utiliza flexbox */
+    align-items: center; /* Alinea verticalmente */
+    justify-content: center; /* Alinea horizontalmente */
+    margin-top: 30px;
+}
+
+.logo {
+    height: 40px;
+    padding-right: 8px;
+}
+
+.sub-heading {
+    text-align: center;
+    font-size: 1.5rem;
+    display: flex; /* Utiliza flexbox */
+    align-items: center; /* Alinea verticalmente */
+    justify-content: center; /* Alinea horizontalmente */
+}
+
+.sub-heading .logo {
+    height: 30px; /* Ajusta la altura según sea necesario */
+    padding-right: 5px;
+}
