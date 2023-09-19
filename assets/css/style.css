@@ -25,37 +25,45 @@ body {
 .sub-heading {
     text-align: center;
     font-size: 1.5rem;
-    display: flex; /* Utiliza flexbox */
-    align-items: center; /* Alinea verticalmente */
-    justify-content: center; /* Alinea horizontalmente */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
     margin-bottom: 30px;
 }
 .log-in {
     width: 100%;
-    position: relative; /* Añade una posición relativa para posicionar el formulario */
+    position: relative;
     text-align: center;
 }
 #image-station {
     width: 100%;
 }
 #gameForm {
-    position: absolute; /* Añade una posición absoluta para el formulario */
-    top: 50%; /* Coloca el formulario en la mitad superior del contenedor */
-    left: 50%; /* Coloca el formulario en el centro horizontal del contenedor */
-    transform: translate(-50%, -50%); /* Centra el formulario completamente */
-    background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente blanco */
-    padding: 20px; /* Espacio alrededor del formulario */
-    max-width: 300px; /* Limita el ancho del formulario */
-    margin: 0 auto; /* Centra el formulario horizontalmente */
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: rgba(255, 255, 255, 0.2); 
+    padding: 20px; 
+    max-width: 300px;
+    margin: 0 auto; 
 }
 #gameForm label {
-    font-weight: bold; /* Texto en negrita */
-    font-size: 1.8em; /* Tamaño de fuente más grande */
+    font-weight: bold; 
+    font-size: 1.8em;
 }
 
 #gameForm input {
     font-weight: bold; /* Texto en negrita */
     font-size: 1.2em; /* Tamaño de fuente más grande */
     border: 2px solid #000; /* Borde más marcado */
+}
+
+/* style to game*/
+.space-odissey {
+    width: 600px;
+}
+#inside-spaceship {
+    width: 300px;
 }
 
