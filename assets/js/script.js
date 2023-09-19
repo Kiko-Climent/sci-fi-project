@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", function() {
     let userName = params.get('username');
 
     if (userName) {
-        let playerElement = document.querySelector(".player");
+        let playerElements = document.getElementsByClassName("player");
+        let playerElement = playerElements[0];
         playerElement.textContent = `Player: ${userName}`;
     }
 
