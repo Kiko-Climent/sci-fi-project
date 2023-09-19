@@ -19,26 +19,56 @@
     </h1>
     <h3 class="sub-heading"> How much do you know about sci-fi movies?</h3>
     <section>
-        <div class="space-odissey">
+        <div class="score-box">
+            <p class="player">Player:</p>
+            <p class="scores">Correct Answers <span id="score">0</span></p>
+            <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
+        </div>
+    </section>
+    <section>
+        <div class="quiz">
             <h2>2001: A Space Odissey</h2>
-            <img src="assets/images/2001.inside.spaceship.jpg" alt="2001-inside">
+            <img src="assets/images/2001.inside.spaceship.jpg" alt="2001: Inside the Spaceship">
             <p>If we talk about sci-fi, it's impossible not to mention Kubrick's masterpiece "2001: A Space Odyssey," a film that influenced all the sci-fi films that came afterwards. Could you tell us in which year it was released?</p>
-            <form action="#" id="questionForm">
-                <label>
-                    <input type="radio" name="answer" value="1968"> 1968
-                </label><br>
-                <label>
-                    <input type="radio" name="answer" value="1972"> 1972
-                </label><br>
-                <label>
-                    <input type="radio" name="answer" value="1980"> 1980
-                </label><br>
-                <label>
-                    <input type="radio" name="answer" value="1990"> 1990
-                </label><br>
-                <button type="submit">Submit</button>
-            </form>
-        
+            <div>
+              <div class="answer-option" onclick="selectAnswer('1968')">1974</div>
+              <div class="answer-option" onclick="selectAnswer('1968')">1968</div>
+              <div class="answer-option" onclick="selectAnswer('1968')">1980</div>
+              <div class="answer-option" onclick="selectAnswer('1968')">1983</div>
+            </div>
+        </div>
+        <div class="quiz">
+            <h2>Blade Runner</h2>
+            <img src="assets/images/blade-runner.jpg" alt="Blade Runner Poster">
+            <p>It's quite strange to talk about Blade Runner nowadays as an underrated science fiction film, but it was. There were few critics after its release in 1982 who praised Ridley Scott's proposal. Over time, the film grew in popularity to the point of becoming iconic, receiving a new reinterpretation in recent years. But do you know which director brought this classic of "cyberpunk" aesthetics back to the big screen?</p>
+            <div>
+              <div class="answer-option" onclick="selectAnswer('Dennis Villeneuve')">David Fincher</div>
+              <div class="answer-option" onclick="selectAnswer('Dennis Villeneuve')">Christopher Nolan</div>
+              <div class="answer-option" onclick="selectAnswer('Dennis Villeneuve')">Alfonso Cuarón</div>
+              <div class="answer-option" onclick="selectAnswer('Dennis Villeneuve')">Dennis Villeneuve</div>
+            </div>
+        </div>
+        <div class="quiz">
+            <h2>Alien</h2>
+            <img src="assets/images/Alien-Documentary.jpeg" alt="Alien making of">
+            <p>It's evident that Ridley Scott played a crucial role in shaping science fiction cinema, particularly in the 1980s. Besides Blade Runner, he was the mastermind behind 'Alien,' setting the stage for it to evolve into a full-fledged saga. Can you identify the lead actress in the first three films?</p>
+            <div>
+              <div class="answer-option" onclick="selectAnswer('Brooke Shields')">Brooke Shields</div>
+              <div class="answer-option" onclick="selectAnswer('Sigourney Weaver')">Sigourney Weaver</div>
+              <div class="answer-option" onclick="selectAnswer('Demi Moore')">Demi Moore</div>
+              <div class="answer-option" onclick="selectAnswer('Susan Sarandon')">Susan Sarandon</div>
+            </div>
+        </div>
+        <div class="quiz">
+            <h2>Twelve Monkeys</h2>
+            <img src="assets/images/Twelve-Monkeys.jpg" alt="12 Monkeys Poster">
+            <p>In the year 2033, James Cole (Bruce Willis) is sent back in time to try to prevent a deadly virus from wiping out over 90% of the world's population. To do this, he must find those who are supposedly responsible for this tragedy, the "12 Monkeys." Can you tell us which actor portrayed the leader of this organization?</p>
+            <div>
+              <div class="answer-option" onclick="selectAnswer('Robert de Niro')">Robert de Niro</div>
+              <div class="answer-option" onclick="selectAnswer('Sean Penn')">Sean Penn</div>
+              <div class="answer-option" onclick="selectAnswer('Brad Pitt')">Brad Pitt</div>
+              <div class="answer-option" onclick="selectAnswer('Woody Harrelson')">Woody Harrelson</div>
+            </div>
         </div>
     </section>
 </body>

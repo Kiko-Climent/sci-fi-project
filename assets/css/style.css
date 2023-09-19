@@ -60,10 +60,25 @@ body {
 }
 
 /* style to game*/
-.space-odissey {
-    width: 600px;
+.score-box {
+    display: block;
+    margin: 10px auto;
+    border: 2px solid #000;
+    padding: 10px;
+    text-align: center;
 }
-#inside-spaceship {
-    width: 300px;
+.quiz {
+    flex-direction: column;
+    text-align: center;
+   
 }
+
+.answer-option {
+    border: 2px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
 
