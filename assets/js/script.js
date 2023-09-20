@@ -22,3 +22,31 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = `game.html?username=${userName}`;
     });
 });
+
+//** mark selected option and check if correct */
+let selectedOption = null;
+
+function selectAnswer(correctAnswer) {
+    let clickedOption = event.target;
+
+    if (selectedOption !== null) {
+        selectedOption.classList.remove('selected');
+    }
+
+    clickedOption.classList.add('selected');
+    selectedOption = clickedOption;
+
+    // Verificar si la respuesta seleccionada es correcta
+    if (clickedOption.innerText === correctAnswer) {
+        console.log("That's Correct!");
+    } else {
+        console.log("You Fail!");
+    }
+}
+
+
+
+
+
+
+
