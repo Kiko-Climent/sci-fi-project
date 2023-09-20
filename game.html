@@ -18,12 +18,14 @@
         <img src="assets/images/star-trek-64.png" alt="logo">SCI-FI & MOVIES
     </h1>
     <h3 class="sub-heading">How much do you know about sci-fi movies?</h3>
+        <!-- add score box -->
         <div class="score-box">
             <p class="player">Player: </p>
             <p class="scores">Correct Answers <span id="correct">0</span></p>
             <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
         </div>
     <section>
+        <!-- add game guiz -->
         <div class="quiz">
             <h2>2001: A Space Odissey</h2>
             <img src="assets/images/2001.inside.spaceship.jpg" alt="2001: Inside the Spaceship">
@@ -34,6 +36,8 @@
               <div class="answer-option" onclick="selectAnswer('1968')">1980</div>
               <div class="answer-option" onclick="selectAnswer('1968')">1983</div>
             </div>
+            <!-- add button to check answer-->
+            <button data-type="check-answer" class="check-button">Check!</button>
         </div>
         <div class="quiz">
             <h2>Blade Runner</h2>
@@ -45,16 +49,17 @@
               <div class="answer-option" onclick="selectAnswer('Dennis Villeneuve')">Alfonso Cuarón</div>
               <div class="answer-option" onclick="selectAnswer('Dennis Villeneuve')">Dennis Villeneuve</div>
             </div>
+            <button data-type="check-answer" class="btn btn--gray">Check!</button>
         </div>
         <div class="quiz">
             <h2>Alien</h2>
             <img src="assets/images/Alien-Documentary.jpeg" alt="Alien making of">
             <p>It's evident that Ridley Scott played a crucial role in shaping science fiction cinema, particularly in the 1980s. Besides Blade Runner, he was the mastermind behind 'Alien,' setting the stage for it to evolve into a full-fledged saga. Can you identify the lead actress in the first three films?</p>
             <div>
-              <div class="answer-option" onclick="selectAnswer('Brooke Shields')">Brooke Shields</div>
+              <div class="answer-option" onclick="selectAnswer('Sigourney Weaver')">Brooke Shields</div>
               <div class="answer-option" onclick="selectAnswer('Sigourney Weaver')">Sigourney Weaver</div>
-              <div class="answer-option" onclick="selectAnswer('Demi Moore')">Demi Moore</div>
-              <div class="answer-option" onclick="selectAnswer('Susan Sarandon')">Susan Sarandon</div>
+              <div class="answer-option" onclick="selectAnswer('Sigourney Weaver')">Demi Moore</div>
+              <div class="answer-option" onclick="selectAnswer('Sigourney Weaver')">Susan Sarandon</div>
             </div>
         </div>
         <div class="quiz">
@@ -62,10 +67,10 @@
             <img src="assets/images/Twelve-Monkeys.jpg" alt="12 Monkeys Poster">
             <p>In the year 2033, James Cole (Bruce Willis) is sent back in time to try to prevent a deadly virus from wiping out over 90% of the world's population. To do this, he must find those who are supposedly responsible for this tragedy, the "12 Monkeys." Can you tell us which actor portrayed the leader of this organization?</p>
             <div>
-              <div class="answer-option" onclick="selectAnswer('Robert de Niro')">Robert de Niro</div>
-              <div class="answer-option" onclick="selectAnswer('Sean Penn')">Sean Penn</div>
+              <div class="answer-option" onclick="selectAnswer('Brad Pitt')">Robert de Niro</div>
+              <div class="answer-option" onclick="selectAnswer('Brad Pitt')">Sean Penn</div>
               <div class="answer-option" onclick="selectAnswer('Brad Pitt')">Brad Pitt</div>
-              <div class="answer-option" onclick="selectAnswer('Woody Harrelson')">Woody Harrelson</div>
+              <div class="answer-option" onclick="selectAnswer('Brad Pitt')">Woody Harrelson</div>
             </div>
         </div>
     </section>

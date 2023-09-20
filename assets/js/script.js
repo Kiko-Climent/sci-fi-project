@@ -1,3 +1,5 @@
+//** add username form form page to game page as player */
+
 document.addEventListener("DOMContentLoaded", function() {
     let params = new URLSearchParams(window.location.search);
     let userName = params.get('username');
