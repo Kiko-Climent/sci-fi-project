@@ -1,4 +1,4 @@
-//** add username form form page to game page as player */
+//** add username from log in page to game page as player */
 
 document.addEventListener("DOMContentLoaded", function() {
     let params = new URLSearchParams(window.location.search);
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-//** mark selected option and check if correct */
+//** mark selected option */
 let selectedOption = null;
 
 function selectAnswer(correctAnswer) {
@@ -36,13 +36,46 @@ function selectAnswer(correctAnswer) {
     clickedOption.classList.add('selected');
     selectedOption = clickedOption;
 
-    // Verificar si la respuesta seleccionada es correcta
+    // Check if the selected is correct
     if (clickedOption.innerText === correctAnswer) {
         console.log("That's Correct!");
     } else {
-        console.log("You Fail!");
+        console.log("You Failed!");
     }
 }
+
+//** */ add checker coorect or incorrect and modify color
+// Añade el código para verificar las respuestas al hacer clic en el botón "Check"
+let checkButtons = document.querySelectorAll('[data-type="check-answer"]');
+
+for (let i = 0; i < checkButtons.length; i++) {
+    checkButtons[i].addEventListener('click', function() {
+        let quiz = this.parentElement;
+        let correctAnswer = quiz.querySelector('.answer-option.correct');
+        let selectedAnswer = quiz.querySelector('.answer-option.selected');
+
+        if (!selectedAnswer) return;
+
+        if (selectedAnswer === correctAnswer) {
+            selectedAnswer.classList.remove('selected');
+            selectedAnswer.classList.add('correct');
+        } else {
+            selectedAnswer.classList.remove('selected');
+            selectedAnswer.classList.add('incorrect');
+            correctAnswer.classList.add('correct');
+        }
+    });
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

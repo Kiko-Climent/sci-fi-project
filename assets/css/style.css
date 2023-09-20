@@ -43,7 +43,7 @@ body {
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
-    background-color: rgba(255, 255, 255, 0.2); 
+    background-color: rgba(255, 255, 255, 0.7); 
     padding: 20px; 
     max-width: 300px;
     margin: 0 auto; 
@@ -54,9 +54,9 @@ body {
 }
 
 #gameForm input {
-    font-weight: bold; /* Texto en negrita */
-    font-size: 1.2em; /* Tamaño de fuente más grande */
-    border: 2px solid #000; /* Borde más marcado */
+    font-weight: bold; 
+    font-size: 1.2em; 
+    border: 2px solid #000; 
 }
 
 /* style to game*/
@@ -80,8 +80,17 @@ body {
     cursor: pointer;
 }
 
+/* change options color if selected, correct, incorrect */
 .answer-option.selected {
-    background-color: green;
+    background-color:#469bba;
+}
+
+.answer-option.correct {
+    background-color: #4caf50;
+}
+
+.answer-option.incorrect {
+    background-color: #f44336;
 }
 
 
