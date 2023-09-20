@@ -45,13 +45,12 @@ function selectAnswer(correctAnswer) {
 }
 
 //** */ add checker coorect or incorrect and modify color
-// Añade el código para verificar las respuestas al hacer clic en el botón "Check"
 let checkButtons = document.querySelectorAll('[data-type="check-answer"]');
 
 for (let i = 0; i < checkButtons.length; i++) {
     checkButtons[i].addEventListener('click', function() {
         let quiz = this.parentElement;
-        let correctAnswer = quiz.querySelector('.answer-option.correct');
+        let correctAnswer = quiz.querySelector('.answer-option[data-correct="true"]');
         let selectedAnswer = quiz.querySelector('.answer-option.selected');
 
         if (!selectedAnswer) return;
