@@ -32,6 +32,7 @@
             <p>If we talk about sci-fi, it's impossible not to mention Kubrick's masterpiece "2001: A Space Odyssey," a film that influenced all the sci-fi films that came afterwards. Could you tell us in which year it was released?</p>
             <div>
               <div class="answer-option option1" onclick="selectAnswer('1968')">1974</div>
+              <!-- add data-correct for the correct answers -->
               <div class="answer-option option2" data-correct="true" onclick="selectAnswer('1968')">1968</div>
               <div class="answer-option option3" onclick="selectAnswer('1968')">1980</div>
               <div class="answer-option option4" onclick="selectAnswer('1968')">1983</div>
@@ -47,9 +48,9 @@
               <div class="answer-option" onclick="selectAnswer('Dennis Villeneuve')">David Fincher</div>
               <div class="answer-option" onclick="selectAnswer('Dennis Villeneuve')">Christopher Nolan</div>
               <div class="answer-option" onclick="selectAnswer('Dennis Villeneuve')">Alfonso Cuarón</div>
-              <div class="answer-option" onclick="selectAnswer('Dennis Villeneuve')">Dennis Villeneuve</div>
+              <div class="answer-option" data-correct="true" onclick="selectAnswer('Dennis Villeneuve')">Dennis Villeneuve</div>
             </div>
-            <button data-type="check-answer" class="btn btn--gray">Check!</button>
+            <button data-type="check-answer" class="check-button">Check!</button>
         </div>
         <div class="quiz">
             <h2>Alien</h2>
@@ -57,10 +58,11 @@
             <p>It's evident that Ridley Scott played a crucial role in shaping science fiction cinema, particularly in the 1980s. Besides Blade Runner, he was the mastermind behind 'Alien,' setting the stage for it to evolve into a full-fledged saga. Can you identify the lead actress in the first three films?</p>
             <div>
               <div class="answer-option" onclick="selectAnswer('Sigourney Weaver')">Brooke Shields</div>
-              <div class="answer-option" onclick="selectAnswer('Sigourney Weaver')">Sigourney Weaver</div>
+              <div class="answer-option" data-correct="true" onclick="selectAnswer('Sigourney Weaver')">Sigourney Weaver</div>
               <div class="answer-option" onclick="selectAnswer('Sigourney Weaver')">Demi Moore</div>
               <div class="answer-option" onclick="selectAnswer('Sigourney Weaver')">Susan Sarandon</div>
             </div>
+            <button data-type="check-answer" class="check-button">Check!</button>
         </div>
         <div class="quiz">
             <h2>Twelve Monkeys</h2>
@@ -69,9 +71,22 @@
             <div>
               <div class="answer-option" onclick="selectAnswer('Brad Pitt')">Robert de Niro</div>
               <div class="answer-option" onclick="selectAnswer('Brad Pitt')">Sean Penn</div>
-              <div class="answer-option" onclick="selectAnswer('Brad Pitt')">Brad Pitt</div>
+              <div class="answer-option" data-correct="true" onclick="selectAnswer('Brad Pitt')">Brad Pitt</div>
               <div class="answer-option" onclick="selectAnswer('Brad Pitt')">Woody Harrelson</div>
             </div>
+            <button data-type="check-answer" class="check-button">Check!</button>
+        </div>
+        <div class="quiz">
+            <h2>Arrival</h2>
+            <img src="assets/images/arrival.jpeg" alt="Arrival">
+            <p>A few years ago, Denis Villeneuve surprised everyone with this fantastic movie in which Amy Adams is "Louise Banks", a linguist enlisted by the United States Army to discover how to communicate with extraterrestrials who have arrived on Earth, before tensions lead to war. Could you tell us how were named the Aliens in this movie?</p>
+            <div>
+              <div class="answer-option" onclick="selectAnswer('Heptapods')">Tetrapods</div>
+              <div class="answer-option" onclick="selectAnswer('Heptapods')">Octopods</div>
+              <div class="answer-option" onclick="selectAnswer('Heptapods')">UFO's</div>
+              <div class="answer-option" data-correct="true" onclick="selectAnswer('Heptapods')">Heptapods</div>
+            </div>
+            <button data-type="check-answer" class="check-button">Check!</button>
         </div>
     </section>
     <script src="assets/js/script.js"></script>

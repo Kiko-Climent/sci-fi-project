@@ -36,7 +36,7 @@ function selectAnswer(correctAnswer) {
     clickedOption.classList.add('selected');
     selectedOption = clickedOption;
 
-    // Check if the selected is correct
+    // Check if the selected option is correct
     if (clickedOption.innerText === correctAnswer) {
         console.log("That's Correct!");
     } else {
@@ -44,12 +44,13 @@ function selectAnswer(correctAnswer) {
     }
 }
 
-//** */ add checker coorect or incorrect and modify color
+//** */ add checker correct or incorrect and modify color
 let checkButtons = document.querySelectorAll('[data-type="check-answer"]');
 
 for (let i = 0; i < checkButtons.length; i++) {
     checkButtons[i].addEventListener('click', function() {
         let quiz = this.parentElement;
+        // make correct answer light green once it's checked
         let correctAnswer = quiz.querySelector('.answer-option[data-correct="true"]');
         let selectedAnswer = quiz.querySelector('.answer-option.selected');
 
@@ -66,7 +67,11 @@ for (let i = 0; i < checkButtons.length; i++) {
     });
 }
 
-
+// add score to scorebox
+function incrementScore() {
+    let oldscore = document.getElementById("correct").innerText;
+    document.getElementById("correct").innerText = ++oldscore;
+}
 
 
 
