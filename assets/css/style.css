@@ -8,7 +8,10 @@
 header {
     
 }
-
+/* add some space to make breath the texts */
+p {
+    line-height: 1.5;
+}
 
 body {
     background-color: #f5f2f4;
