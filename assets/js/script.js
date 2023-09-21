@@ -1,6 +1,7 @@
 //** add username from log in page to game page as player */
 
 document.addEventListener("DOMContentLoaded", function() {
+    alert("May the force be with you!");
     let params = new URLSearchParams(window.location.search);
     let userName = params.get('username');
 
@@ -8,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let playerElements = document.getElementsByClassName("player");
         let playerElement = playerElements[0];
         playerElement.textContent = `Player: ${userName}`;
+        
     }
 
     let gameForm = document.getElementById("gameForm");
@@ -17,9 +19,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // get username
         let userName = document.getElementById("user-name").value;
+        
 
         // go to game page
         window.location.href = `game.html?username=${userName}`;
+        
     });
 });
 
@@ -59,9 +63,13 @@ for (let i = 0; i < checkButtons.length; i++) {
         if (selectedAnswer === correctAnswer) {
             selectedAnswer.classList.remove('selected');
             selectedAnswer.classList.add('correct');
+            // increment score in scorebox
+            incrementScore();
         } else {
             selectedAnswer.classList.remove('selected');
             selectedAnswer.classList.add('incorrect');
+            // increment incorrect score
+            incrementIncorrect()
             correctAnswer.classList.add('correct');
         }
     });
@@ -71,6 +79,12 @@ for (let i = 0; i < checkButtons.length; i++) {
 function incrementScore() {
     let oldscore = document.getElementById("correct").innerText;
     document.getElementById("correct").innerText = ++oldscore;
+}
+
+// add number of incorrect answers
+function incrementIncorrect() {
+    let oldscore = document.getElementById("incorrect").innerText;
+    document.getElementById("incorrect").innerText = ++oldscore;
 }
 
 

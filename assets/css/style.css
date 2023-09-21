@@ -7,15 +7,18 @@
 }
 header {
     
+    
 }
 /* add some space to make breath the texts */
-p {
+body {
     line-height: 1.5;
+    letter-spacing: 2px;
 }
 
 body {
     background-color: #f5f2f4;
 }
+
 /* Add style to heading and logo*/
 .heading {
     text-align: center;
