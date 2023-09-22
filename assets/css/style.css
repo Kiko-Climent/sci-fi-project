@@ -4,6 +4,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
 }
 header {
     
@@ -12,7 +13,6 @@ header {
 /* add some space to make breath the texts */
 body {
     line-height: 1.5;
-    letter-spacing: 2px;
 }
 
 body {
@@ -59,6 +59,10 @@ body {
     max-width: 300px;
     margin: 0 auto; 
 }
+.play {
+    font-weight: bold;
+    font-size: medium;
+}
 #gameForm label {
     font-weight: bold; 
     font-size: 1.8em;
@@ -88,6 +92,9 @@ footer {
     margin-top: 7px;
    
 }
+.answer-option:hover {
+    background-color:#469bba;
+}
 
 .answer-option {
     border: 2px solid #ccc;
@@ -98,7 +105,8 @@ footer {
 .check-button {
     font-weight: bold;
 }
-.check-button :hover {
+.check-button:hover {
+    font-size: medium;
     background-color: #f44336;
 }
 
