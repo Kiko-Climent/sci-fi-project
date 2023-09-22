@@ -1,8 +1,5 @@
 // execute this code once DOM is charged in the document
 document.addEventListener("DOMContentLoaded", function() {
-    
-    // add variable to count the amount of correct answers
-    let selectedOptions = 0;
 
     // get username from URL
     let params = new URLSearchParams(window.location.search);
@@ -34,8 +31,11 @@ document.addEventListener("DOMContentLoaded", function() {
         
     });
 });
+// add variable to count the amount of correct answers
+let selectedOptions = 0;
 // mark selected option
 let selectedOption = null;
+
 
 function selectAnswer(correctAnswer) {
     let clickedOption = event.target;
@@ -80,6 +80,7 @@ for (let i = 0; i < checkButtons.length; i++) {
             incrementIncorrect()
             correctAnswer.classList.add('correct');
         }
+        showFinalResult();
     });
 }
 
@@ -88,9 +89,13 @@ function incrementScore() {
     let oldscore = document.getElementById("correct").innerText;
     document.getElementById("correct").innerText = ++oldscore;
 
+
+
     // increment the counter of correct answers
     selectedOptions++;
 }
+
+
 
 // add number of incorrect answers
 function incrementIncorrect() {
@@ -101,6 +106,7 @@ function incrementIncorrect() {
 
 // final result box
 function showFinalResult() {
+    
     let finalResultElement = document.querySelector('.final-result');
 
     if (selectedOptions === 8) {
@@ -111,6 +117,5 @@ function showFinalResult() {
         finalResultElement.textContent = 'Your result: You should watch more Sci-Fi dude.';
     } else if (selectedOptions === 0) {
         finalResultElement.textContent = 'Your result: Definitely Sci-Fi is not for you.';
-    }
+    }   
 }
-showFinalResult();
