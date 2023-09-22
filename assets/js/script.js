@@ -109,9 +109,9 @@ function showFinalResult() {
     
     let finalResultElement = document.querySelector('.final-result');
 
-    if (selectedOptions === 8) {
+    if (selectedOptions === 10) {
         finalResultElement.textContent = 'Your result: You are a master in Sci-Fi';
-    } else if (selectedOptions >= 5 && selectedOptions <= 7) {
+    } else if (selectedOptions >= 5 && selectedOptions <= 9) {
         finalResultElement.textContent = 'Your result: You know a lot about Sci-Fi';
     } else if (selectedOptions < 5 && selectedOptions > 0) {
         finalResultElement.textContent = 'Your result: You should watch more Sci-Fi dude.';
