@@ -6,19 +6,19 @@
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 2px;
 }
-header {
-    
-    
-    
+
+header>a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bolder;
+
 }
 /* add some space to make breath the texts */
 body {
     line-height: 1.5;
-}
-
-body {
     background-color: #f5f2f4;
 }
+
 
 /* Add style to heading and logo*/
 .heading {
@@ -118,6 +118,12 @@ footer {
     padding: 10px;
     text-align: center;
     font-weight: bold;
+}
+/* style the restart link */
+#restart {
+    text-decoration: none;
+    color: #000;
+    font-weight: bolder;
 }
 
 /* change options color if selected, correct, incorrect */

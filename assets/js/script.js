@@ -30,7 +30,19 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = `game.html?username=${userName}`;
         
     });
+
+
+
+
+    // add function to see next question only when the one before is answered
+    let currentQuestion = 1;
+    // hide questions
+    for(let i = 2; i <= 10; i++) {
+    document.getElementById(`question${i}`).style.display = "none";
+}
 });
+
+
 // add variable to count the amount of correct answers
 let selectedOptions = 0;
 // mark selected option
