@@ -30,7 +30,7 @@
         </div>
     <section>
         <!-- add game guiz -->
-        <div class="quiz" id="question1">
+        <div class="quiz show" id="question1">
             <h2>2001: A Space Odissey</h2>
             <img class="quiz-img" src="assets/images/2001.inside.spaceship.jpg" alt="2001: Inside the Spaceship">
             <p>If we talk about sci-fi, it's impossible not to mention Kubrick's masterpiece "2001: A Space Odyssey," a film that influenced all the sci-fi films that came afterwards. Could you tell us in which year it was released?</p>
@@ -43,6 +43,7 @@
             </div>
             <!-- add button to check answer-->
             <button data-type="check-answer" class="check-button">Check!</button>
+            <button onclick="next('question2')" class="check-button" disabled>Next!</button>
         </div>
         <!-- add quiz game -->
         <div class="quiz" id="question2">
@@ -56,6 +57,7 @@
               <div class="answer-option" data-correct="true" onclick="selectAnswer('Dennis Villeneuve')">Dennis Villeneuve</div>
             </div>
             <button data-type="check-answer" class="check-button">Check!</button>
+            <button onclick="next('question3')" class="check-button">Next!</button>
         </div>
         <div class="quiz" id="question3">
             <h2>Alien</h2>

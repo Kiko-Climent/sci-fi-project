@@ -131,3 +131,14 @@ function showFinalResult() {
         finalResultElement.textContent = 'Your result: Definitely Sci-Fi is not for you.';
     }   
 }
+
+function next(questionNumber) {
+    let questions = document.querySelectorAll('.quiz');
+
+    questions.forEach(function(elemento) {
+      elemento.classList.remove('show');
+    });
+
+    let questionShowing = document.getElementById(questionNumber);
+    questionShowing.classList.add('show');
+}

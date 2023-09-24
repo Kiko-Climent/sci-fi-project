@@ -98,7 +98,11 @@ footer {
     flex-direction: column;
     text-align: center;
     margin-top: 7px;
+    display: none;
    
+}
+.quiz.show {
+    display: block;
 }
 .answer-option:hover {
     background-color:#469bba;
