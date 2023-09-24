@@ -43,7 +43,7 @@
             </div>
             <!-- add button to check answer-->
             <button data-type="check-answer" class="check-button">Check!</button>
-            <button onclick="next('question2')" class="check-button" disabled>Next!</button>
+            <button onclick="next('question2')" class="next-button" disabled>Next!</button>
         </div>
         <!-- add quiz game -->
         <div class="quiz" id="question2">
@@ -57,7 +57,7 @@
               <div class="answer-option" data-correct="true" onclick="selectAnswer('Dennis Villeneuve')">Dennis Villeneuve</div>
             </div>
             <button data-type="check-answer" class="check-button">Check!</button>
-            <button onclick="next('question3')" class="check-button">Next!</button>
+            <button onclick="next('question3')" class="next-button">Next!</button>
         </div>
         <div class="quiz" id="question3">
             <h2>Alien</h2>
@@ -70,6 +70,7 @@
               <div class="answer-option" onclick="selectAnswer('Sigourney Weaver')">Susan Sarandon</div>
             </div>
             <button data-type="check-answer" class="check-button">Check!</button>
+            <button onclick="next('question4')" class="next-button">Next!</button>
         </div>
         <div class="quiz" id="question4">
             <h2>Twelve Monkeys</h2>
@@ -82,6 +83,7 @@
               <div class="answer-option" onclick="selectAnswer('Brad Pitt')">Woody Harrelson</div>
             </div>
             <button data-type="check-answer" class="check-button">Check!</button>
+            <button onclick="next('question5')" class="next-button">Next!</button>
         </div>
         <div class="quiz" id="question5">
             <h2>Arrival</h2>
@@ -94,6 +96,7 @@
               <div class="answer-option" data-correct="true" onclick="selectAnswer('Heptapods')">Heptapods</div>
             </div>
             <button data-type="check-answer" class="check-button">Check!</button>
+            <button onclick="next('question6')" class="next-button">Next!</button>
         </div>
         <div class="quiz" id="question6">
             <h2>Akira</h2>
@@ -106,6 +109,7 @@
               <div class="answer-option" onclick="selectAnswer('Neo-Tokyo')">New-Osaka</div>
             </div>
             <button data-type="check-answer" class="check-button">Check!</button>
+            <button onclick="next('question7')" class="next-button">Next!</button>
         </div>
         <div class="quiz" id="question7">
             <h2>X-Files</h2>
@@ -118,6 +122,7 @@
               <div class="answer-option" onclick="selectAnswer('Mulder & Scully')">Allen & Anderson</div>
             </div>
             <button data-type="check-answer" class="check-button">Check!</button>
+            <button onclick="next('question8')" class="next-button">Next!</button>
         </div>
         <div class="quiz" id="question8">
             <h2>Interestellar</h2>
@@ -130,6 +135,7 @@
               <div class="answer-option" onclick="selectAnswer('thirteen')">Fourteen</div>
             </div>
             <button data-type="check-answer" class="check-button">Check!</button>
+            <button onclick="next('question9')" class="next-button">Next!</button>
         </div>
         <div class="quiz" id="question9">
             <h2>Under The Skin</h2>
@@ -142,6 +148,7 @@
               <div class="answer-option" onclick="selectAnswer('consume them for her own survival')">She buys them a pint of Guiness</div>
             </div>
             <button data-type="check-answer" class="check-button">Check!</button>
+            <button onclick="next('question10')" class="next-button">Next!</button>
         </div>
         <div class="quiz" id="question10">
             <h2>Ex-Machina</h2>
@@ -154,6 +161,7 @@
               <div class="answer-option" onclick="selectAnswer('Oscar Isaac')">Aleksander Skarsgaard</div>
             </div>
             <button data-type="check-answer" class="check-button">Check!</button>
+            <button onclick="showFinalResult()" id="finalButton" class="next-button" disabled>Show Result</button>
         </div>
     </section>
     <section>

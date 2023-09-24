@@ -92,6 +92,11 @@ for (let i = 0; i < checkButtons.length; i++) {
             incrementIncorrect()
             correctAnswer.classList.add('correct');
         }
+        let nextButtons = document.querySelectorAll('.next-button');
+
+          nextButtons.forEach(function(button) {
+          button.disabled = false;
+        });
         showFinalResult();
     });
 }
@@ -100,8 +105,6 @@ for (let i = 0; i < checkButtons.length; i++) {
 function incrementScore() {
     let oldscore = document.getElementById("correct").innerText;
     document.getElementById("correct").innerText = ++oldscore;
-
-
 
     // increment the counter of correct answers
     selectedOptions++;
@@ -130,8 +133,12 @@ function showFinalResult() {
     } else if (selectedOptions === 0) {
         finalResultElement.textContent = 'Your result: Definitely Sci-Fi is not for you.';
     }   
+    
+    let finalButton = document.getElementById("finalButton");
+    finalButton.classList.add('show');
+    showFinalResult();
 }
-
+// Let show question after previous one is answered
 function next(questionNumber) {
     let questions = document.querySelectorAll('.quiz');
 
@@ -141,4 +148,10 @@ function next(questionNumber) {
 
     let questionShowing = document.getElementById(questionNumber);
     questionShowing.classList.add('show');
+
+    let nextButtons = document.querySelectorAll('.next-button');
+
+      nextButtons.forEach(function(button) {
+      button.disabled = true;
+        });
 }
