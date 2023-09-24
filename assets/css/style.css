@@ -48,7 +48,11 @@ body {
     text-align: center;
 }
 #image-station {
-    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+
+
 }
 #gameForm {
     position: absolute; 
@@ -78,7 +82,9 @@ footer {
     text-align: center;
 }
 
-/* style to game*/
+/* style to game */
+
+
 .score-box {
     display: block;
     margin: 10px auto;
@@ -119,11 +125,18 @@ footer {
     text-align: center;
     font-weight: bold;
 }
+.final-result {
+
+}
 /* style the restart link */
 #restart {
     text-decoration: none;
     color: #000;
     font-weight: bolder;
+    border: 3px solid #000;
+    background-color: #4caf50;
+    padding-left : 2px;
+    padding-right: 2px;
 }
 
 /* change options color if selected, correct, incorrect */
@@ -140,4 +153,47 @@ footer {
 }
 
 
+@media only screen and (max-width: 600px) {
+    .heading {
+        font-size: 1.5rem; /* change font size */
+}
+    #image-station {
+    max-width: 90%;
+}
+    #gameForm {
+        max-width: 50%;
+        max-height: 50%;
+        padding: 10px;
+        font-size: 1rem;
+    }
 
+
+    /* style game page for smaller devices */
+    .quiz-img {
+        width: 75%;
+        height: 75%;
+    }
+
+    .answer-option {
+        font-size: 0.9rem;
+        margin: 5px;
+    }
+
+    .check-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .result-box {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .final-result {
+        margin-top: 10px;
+    }
+
+
+
+
+}
