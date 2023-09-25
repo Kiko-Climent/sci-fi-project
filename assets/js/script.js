@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // get username from URL
     let params = new URLSearchParams(window.location.search);
     let userName = params.get('username');
+    // add welcome alert
+    if (window.location.href.includes("game.html") && userName) {
+        alert("MAY THE FORCE BE WITH YOU");
+    }
 
     // once we have the username
     if (userName) {
@@ -25,14 +29,14 @@ document.addEventListener("DOMContentLoaded", function() {
         // get username
         let userName = document.getElementById("user-name").value;
         
-
         // bring username to URL
         window.location.href = `game.html?username=${userName}`;
         
+        
     });
 
-
-
+    
+    
 
     // add function to see next question only when the one before is answered
     let currentQuestion = 1;
@@ -40,6 +44,8 @@ document.addEventListener("DOMContentLoaded", function() {
     for(let i = 2; i <= 10; i++) {
     document.getElementById(`question${i}`).style.display = "none";
 }
+    
+
 });
 
 
