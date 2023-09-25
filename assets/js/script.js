@@ -97,7 +97,6 @@ for (let i = 0; i < checkButtons.length; i++) {
           nextButtons.forEach(function(button) {
           button.disabled = false;
         });
-        showFinalResult();
     });
 }
 
@@ -132,18 +131,20 @@ function showFinalResult() {
         finalResultElement.textContent = 'Your result: You should watch more Sci-Fi dude.';
     } else if (selectedOptions === 0) {
         finalResultElement.textContent = 'Your result: Definitely Sci-Fi is not for you.';
-    }   
-    
+    }  
+    // show final result only when last question has been answered 
+    let resultBox = document.querySelector('.result-box');
+    resultBox.style.display = 'block';
+
     let finalButton = document.getElementById("finalButton");
     finalButton.classList.add('show');
-    showFinalResult();
 }
-// Let show question after previous one is answered
-function next(questionNumber) {
+// Let show question only after previous one is answered
+    function next(questionNumber) {
     let questions = document.querySelectorAll('.quiz');
 
-    questions.forEach(function(elemento) {
-      elemento.classList.remove('show');
+    questions.forEach(function(element) {
+      element.classList.remove('show');
     });
 
     let questionShowing = document.getElementById(questionNumber);

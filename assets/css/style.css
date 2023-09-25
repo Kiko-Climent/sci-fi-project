@@ -81,7 +81,7 @@ footer {
     text-align: center;
 }
 
-/* style to game */
+/* style to game page */
 
 
 .score-box {
@@ -100,6 +100,11 @@ footer {
     display: none;
    
 }
+.quiz-img{
+    width: 100%;
+    height: 100%;
+}
+
 .quiz.show {
     display: block;
 }
@@ -188,11 +193,7 @@ footer {
 
     }
     
-
-   
-
-
-    /* style game page for smaller devices */
+    /* style game page for mobile devices */
     .quiz-img {
         width: 75%;
         height: 75%;
@@ -216,8 +217,13 @@ footer {
     .final-result {
         margin-top: 10px;
     }
+}
 
+/* add style for medium devices */
 
-
-
+@media only screen and (max-width: 1000px) {
+    .quiz-img {
+        width: 100%;
+        height: 100%;
+    }
 }
