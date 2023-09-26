@@ -1,39 +1,24 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# SCI-FI & MOVIES
+**Sci-Fi & Movies** is a website that engages users by testing their knowledge of some of the most iconic science fiction films. Not only are fans of this subgenre welcome, but Sci-Fi & Movies also aims to promote this genre to expand it to other audiences, share relevant facts, and attempt to increase its viewership
 
-Welcome,
+## DESIGN
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+### Typography
+To suit the page for a space-themed character, I've opted for the **Orbitron** typeface. It's a family of geometric and futuristic sans-serif fonts that bear resemblance to Eurostyle or Microgramma (the font used in the movie _2001: A Space Odyssey_), which is, in my opinion, the most influential science fiction film in history.
+! [Typograph](/media/sci.fi.typo.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+## FEATURES
+The Sci-Fi & Movies game is divided into 2 pages:
 
-## Codeanywhere Reminders
+**THE LOG IN**: That's the first page that the visitor get access to. Basically its an introduction about what its coming next.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+**THE GAME PAGE**: After the user enters their username, they are immediately taken to the beginning of the game. Here, they will encounter 10 diverse questions related to Sci-Fi and Cinema, challenging their knowledge.
 
-`python3 -m http.server`
+### Existing Features
+- __The Sci-Fi & Movies Logo and Heading__
+    - Located at the top of the page, easy to see for the user and with the addition of the _Star Treck_ symbol, that helps contextualize the type of game we are about to access, being one of the most recognized sagas in the history of science fiction cinema.
+    ![Logo](/media/heading.logo.png)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
-
-`http_server`
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
+- __The Log-in Section__
+    - Allows the user to input a _"Username"_ that will be used as the _"Player Name"_ to proceed with the 10 quiz game questions. As background image for the section, I've used another reference to _2001: A Space Odyssey_ by using the original drawing of the space station of the film. The drawing shows a newly launched spacecraft from the station, a fitting symbol for what is about to begin. When we press _"Let's Play"_ it will directly redirect us to the game.
+    ![Log-In](/media/login.section.png)

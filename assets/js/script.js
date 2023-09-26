@@ -1,6 +1,5 @@
 // execute this code once DOM is charged in the document
-document.addEventListener("DOMContentLoaded", function() {
-
+document.addEventListener("DOMContentLoaded", function () {
     // get username from URL
     let params = new URLSearchParams(window.location.search);
     let userName = params.get('username');
@@ -8,44 +7,33 @@ document.addEventListener("DOMContentLoaded", function() {
     if (window.location.href.includes("game.html") && userName) {
         alert("MAY THE FORCE BE WITH YOU");
     }
+    /* custom alert */
 
     // once we have the username
     if (userName) {
         // select elements with class "player"
         let playerElements = document.getElementsByClassName("player");
         let playerElementScoreBox = playerElements[0];
-        let playerElementResultBox =playerElements[1];
+        let playerElementResultBox = playerElements[1];
         // get username content and set it as player in gamepage both in Scorebox and Resultbox
         playerElementScoreBox.textContent = `Player: ${userName}`;
         playerElementResultBox.textContent = `Player: ${userName}`;
-        
     }
-
     let gameForm = document.getElementById("gameForm");
-        // add event once we submit
-    gameForm.addEventListener("submit", function(event) {
+    // add event once we submit
+    gameForm.addEventListener("submit", function (event) {
         event.preventDefault();
-
         // get username
         let userName = document.getElementById("user-name").value;
-        
         // bring username to URL
         window.location.href = `game.html?username=${userName}`;
-        
-        
     });
-
-    
-    
-
     // add function to see next question only when the one before is answered
     let currentQuestion = 1;
     // hide questions
-    for(let i = 2; i <= 10; i++) {
-    document.getElementById(`question${i}`).style.display = "none";
-}
-    
-
+    for (let i = 2; i <= 10; i++) {
+        document.getElementById(`question${i}`).style.display = "none";
+    }
 });
 
 
@@ -57,7 +45,15 @@ let selectedOption = null;
 
 function selectAnswer(correctAnswer) {
     let clickedOption = event.target;
-// If user has already one marked, unmarked the other
+
+// Si no se ha seleccionado ninguna respuesta, mostrar una alerta
+if (!clickedOption.classList.contains('selected')) {
+    alert("Please select an answer before checking.");
+    return;
+}
+
+
+    // If user has already one marked, unmarked the other
     if (selectedOption !== null) {
         selectedOption.classList.remove('selected');
     }
@@ -78,12 +74,12 @@ let checkButtons = document.querySelectorAll('[data-type="check-answer"]');
 
 // add click event to each check button
 for (let i = 0; i < checkButtons.length; i++) {
-    checkButtons[i].addEventListener('click', function() {
+    checkButtons[i].addEventListener('click', function () {
         let quiz = this.parentElement;
         // make correct answer light green once it's checked
         let correctAnswer = quiz.querySelector('.answer-option[data-correct="true"]');
         let selectedAnswer = quiz.querySelector('.answer-option.selected');
-        
+
         if (!selectedAnswer) return;
 
         if (selectedAnswer === correctAnswer) {
@@ -100,8 +96,8 @@ for (let i = 0; i < checkButtons.length; i++) {
         }
         let nextButtons = document.querySelectorAll('.next-button');
 
-          nextButtons.forEach(function(button) {
-          button.disabled = false;
+        nextButtons.forEach(function (button) {
+            button.disabled = false;
         });
     });
 }
@@ -115,8 +111,6 @@ function incrementScore() {
     selectedOptions++;
 }
 
-
-
 // add number of incorrect answers
 function incrementIncorrect() {
     let oldscore = document.getElementById("incorrect").innerText;
@@ -126,7 +120,7 @@ function incrementIncorrect() {
 
 // final result box
 function showFinalResult() {
-    
+
     let finalResultElement = document.querySelector('.final-result');
 
     if (selectedOptions === 10) {
@@ -137,7 +131,7 @@ function showFinalResult() {
         finalResultElement.textContent = 'Your result: You should watch more Sci-Fi dude.';
     } else if (selectedOptions === 0) {
         finalResultElement.textContent = 'Your result: Definitely Sci-Fi is not for you.';
-    }  
+    }
     // show final result only when last question has been answered 
     let resultBox = document.querySelector('.result-box');
     resultBox.style.display = 'block';
@@ -145,12 +139,12 @@ function showFinalResult() {
     let finalButton = document.getElementById("finalButton");
     finalButton.classList.add('show');
 }
-// Let show question only after previous one is answered
-    function next(questionNumber) {
+// show question only after previous one is answered
+function next(questionNumber) {
     let questions = document.querySelectorAll('.quiz');
 
-    questions.forEach(function(element) {
-      element.classList.remove('show');
+    questions.forEach(function (element) {
+        element.classList.remove('show');
     });
 
     let questionShowing = document.getElementById(questionNumber);
@@ -158,7 +152,7 @@ function showFinalResult() {
 
     let nextButtons = document.querySelectorAll('.next-button');
 
-      nextButtons.forEach(function(button) {
-      button.disabled = true;
-        });
+    nextButtons.forEach(function (button) {
+        button.disabled = true;
+    });
 }
