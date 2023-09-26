@@ -1,59 +1,87 @@
-// execute this code once DOM is charged in the document
+// Execute this code once the DOM is loaded in the document
 document.addEventListener("DOMContentLoaded", function () {
-    // get username from URL
+
+    // Get Username from URL
     let params = new URLSearchParams(window.location.search);
     let userName = params.get('username');
-    // add welcome alert
-    if (window.location.href.includes("game.html") && userName) {
-        alert("MAY THE FORCE BE WITH YOU");
-    }
-    /* custom alert */
 
-    // once we have the username
+    // Add a welcome alert
+    if (window.location.href.includes("game.html") && userName) {
+        customAlert(`Welcome ${userName}, Good Luck!`);
+    }
+
+    // Once we have the username
     if (userName) {
-        // select elements with class "player"
+
+        // Select elements with class "player"
         let playerElements = document.getElementsByClassName("player");
         let playerElementScoreBox = playerElements[0];
         let playerElementResultBox = playerElements[1];
-        // get username content and set it as player in gamepage both in Scorebox and Resultbox
+
+        // Get username content and set it as player in game page both in Scorebox and Resultbox
         playerElementScoreBox.textContent = `Player: ${userName}`;
         playerElementResultBox.textContent = `Player: ${userName}`;
     }
+
+    // Get the game form and add an event on submit
     let gameForm = document.getElementById("gameForm");
-    // add event once we submit
     gameForm.addEventListener("submit", function (event) {
         event.preventDefault();
-        // get username
+
+        // Get username
         let userName = document.getElementById("user-name").value;
-        // bring username to URL
+
+        // Bring username to URL
         window.location.href = `game.html?username=${userName}`;
     });
-    // add function to see next question only when the one before is answered
+
+    // Add function to see the next question only when the previous one is answered
     let currentQuestion = 1;
-    // hide questions
+
+    // Hide questions
     for (let i = 2; i <= 10; i++) {
         document.getElementById(`question${i}`).style.display = "none";
     }
 });
 
+// Custom Welcome Alert
+function customAlert(message, color) {
+    let alertContainer = document.createElement("div");
+    alertContainer.style.position = "fixed";
+    alertContainer.style.top = "50%";
+    alertContainer.style.left = "50%";
+    alertContainer.style.transform = "translate(-50%, -50%)";
+    alertContainer.style.padding = "10px 20px";
+    alertContainer.style.backgroundColor = " rgba(255, 255, 255, 0.7)";
+    alertContainer.style.color = "black";
+    alertContainer.style.fontSize = "Medium";
+    alertContainer.style.borderRadius = "5px";
+    alertContainer.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)";
+    alertContainer.textContent = message;
 
-// add variable to count the amount of correct answers
+    document.body.appendChild(alertContainer);
+
+    // Desaparecer la alerta después de 3 segundos
+    setTimeout(function () {
+        alertContainer.style.opacity = "0";
+        setTimeout(function () {
+            alertContainer.remove();
+        }, 1000);
+    }, 3000);
+}
+
+
+
+// Add variable to count the amount of correct answers
 let selectedOptions = 0;
-// mark selected option
-let selectedOption = null;
 
+// Mark selected option
+let selectedOption = null;
 
 function selectAnswer(correctAnswer) {
     let clickedOption = event.target;
 
-// Si no se ha seleccionado ninguna respuesta, mostrar una alerta
-if (!clickedOption.classList.contains('selected')) {
-    alert("Please select an answer before checking.");
-    return;
-}
-
-
-    // If user has already one marked, unmarked the other
+    // If the user has already selected one, unmark the other
     if (selectedOption !== null) {
         selectedOption.classList.remove('selected');
     }
@@ -61,22 +89,23 @@ if (!clickedOption.classList.contains('selected')) {
     clickedOption.classList.add('selected');
     selectedOption = clickedOption;
 
-    // Check if the selected option is correct in console
+    // Check if selected option is the correct one in the console
     if (clickedOption.innerText === correctAnswer) {
-        console.log("That's Correct!");
+        console.log("¡Correcto!");
     } else {
-        console.log("You Failed!");
+        console.log("¡Fallaste!");
     }
 }
 
-//** */ add checker correct or incorrect and modify color
+// Add checker for correct or incorrect answer and modify color
 let checkButtons = document.querySelectorAll('[data-type="check-answer"]');
 
-// add click event to each check button
+// Add click event to each check button
 for (let i = 0; i < checkButtons.length; i++) {
     checkButtons[i].addEventListener('click', function () {
         let quiz = this.parentElement;
-        // make correct answer light green once it's checked
+
+        // Make the correct answer light green once it's checked
         let correctAnswer = quiz.querySelector('.answer-option[data-correct="true"]');
         let selectedAnswer = quiz.querySelector('.answer-option.selected');
 
@@ -85,15 +114,18 @@ for (let i = 0; i < checkButtons.length; i++) {
         if (selectedAnswer === correctAnswer) {
             selectedAnswer.classList.remove('selected');
             selectedAnswer.classList.add('correct');
-            // increment score in scorebox
+
+            // Increment score in scorebox
             incrementScore();
         } else {
             selectedAnswer.classList.remove('selected');
             selectedAnswer.classList.add('incorrect');
-            // increment incorrect score
-            incrementIncorrect()
+
+            // Increment incorrect score
+            incrementIncorrect();
             correctAnswer.classList.add('correct');
         }
+
         let nextButtons = document.querySelectorAll('.next-button');
 
         nextButtons.forEach(function (button) {
@@ -102,25 +134,23 @@ for (let i = 0; i < checkButtons.length; i++) {
     });
 }
 
-// add score to scorebox
+// Add score to scorebox
 function incrementScore() {
     let oldscore = document.getElementById("correct").innerText;
     document.getElementById("correct").innerText = ++oldscore;
 
-    // increment the counter of correct answers
+    // Increment the counter of correct answers
     selectedOptions++;
 }
 
-// add number of incorrect answers
+// Add number of incorrect answers
 function incrementIncorrect() {
     let oldscore = document.getElementById("incorrect").innerText;
     document.getElementById("incorrect").innerText = ++oldscore;
 }
 
-
-// final result box
+// Final result box
 function showFinalResult() {
-
     let finalResultElement = document.querySelector('.final-result');
 
     if (selectedOptions === 10) {
@@ -132,14 +162,16 @@ function showFinalResult() {
     } else if (selectedOptions === 0) {
         finalResultElement.textContent = 'Your result: Definitely Sci-Fi is not for you.';
     }
-    // show final result only when last question has been answered 
+
+    // Show the final result only when the last question has been answered
     let resultBox = document.querySelector('.result-box');
     resultBox.style.display = 'block';
 
     let finalButton = document.getElementById("finalButton");
     finalButton.classList.add('show');
 }
-// show question only after previous one is answered
+
+// Show the next question only after the previous one has been answered
 function next(questionNumber) {
     let questions = document.querySelectorAll('.quiz');
 
