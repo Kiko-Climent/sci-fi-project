@@ -36,7 +36,7 @@ The Sci-Fi & Movies game is divided into 2 pages:
     
     - __The Quiz Game Section__
         - Right after logging in on the main page, upon accessing the __Game Page__, an _alert_ once again wishes the user good luck before starting the quiz game.
-        ![Alert]()
+        ![Alert](/media/alarm.png)
 
         - The Quiz Game consists of 10 questions related to various details about 10 iconic science fiction movies. Each question contains 4 possible answers, of which only one is correct.
         
@@ -44,11 +44,13 @@ The Sci-Fi & Movies game is divided into 2 pages:
         ![Quiz]()
 
     - __The Check Box__
-        - Here the user will find 2 buttons. The first one is the __"Check"__ button to verify if the previously selected option is _correct_ or _incorrect_. Upon clicking the button, it will light up in _green_ if the answer is correct. If the user's selected option is incorrect, it will be colored in _red_, and the correct answer will be revealed, illuminated in green.
+        - Here the user will find 3 buttons. The first one is the __"Check"__ button to verify if the previously selected option is _correct_ or _incorrect_. Upon clicking the button, it will light up in _green_ if the answer is correct. If the user's selected option is incorrect, it will be colored in _red_, and the correct answer will be revealed, illuminated in green.
 
-        The second button, __"Next!"__, will only be accessible once the user has answered the question. After answering, this button will become enabled to proceed with the next question of the game.
+        - The second button, __"Next!"__, will only be accessible once the user has answered the question. After answering, this button will become enabled to proceed with the next question of the game.
         ![Check-Box]()
         ![Question Answered]()
+        
+        - 
 
 ## TESTING
 

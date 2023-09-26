@@ -54,14 +54,15 @@ function customAlert(message, color) {
     alertContainer.style.padding = "10px 20px";
     alertContainer.style.backgroundColor = " rgba(255, 255, 255, 0.7)";
     alertContainer.style.color = "black";
-    alertContainer.style.fontSize = "Medium";
+    alertContainer.style.fontSize = "Large";
+    alertContainer.style.fontWeight = "bold";
     alertContainer.style.borderRadius = "5px";
     alertContainer.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)";
     alertContainer.textContent = message;
 
     document.body.appendChild(alertContainer);
 
-    // Desaparecer la alerta después de 3 segundos
+    // Alert disapear after 3 seconds
     setTimeout(function () {
         alertContainer.style.opacity = "0";
         setTimeout(function () {
@@ -91,9 +92,9 @@ function selectAnswer(correctAnswer) {
 
     // Check if selected option is the correct one in the console
     if (clickedOption.innerText === correctAnswer) {
-        console.log("¡Correcto!");
+        console.log("¡Correct!");
     } else {
-        console.log("¡Fallaste!");
+        console.log("¡You Fail!");
     }
 }
 
@@ -126,6 +127,7 @@ for (let i = 0; i < checkButtons.length; i++) {
             correctAnswer.classList.add('correct');
         }
 
+        this.disabled = true; // Disable Check! button once the solution is revealed
         let nextButtons = document.querySelectorAll('.next-button');
 
         nextButtons.forEach(function (button) {
