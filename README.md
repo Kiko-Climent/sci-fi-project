@@ -114,13 +114,15 @@ The Sci-Fi & Movies game is divided into 2 pages:
 - I found this warning in the live version of the site:
 ![WARNING](/media/debugging3.png)
 - After doing some research i found this:
-![Google Abandons FLOC](https://www.theverge.com/2022/1/25/22900567/google-floc-abandon-topics-api-cookies-tracking)
+- GOOGLE ABANDONDS FLOC (https://www.theverge.com/2022/1/25/22900567/google-floc-abandon-topics-api-cookies-tracking)
 
 ### Solved Bugs
-- I found an error in the console when the user just enter in the main page. _"Cannot read properties of null (reading 'style'),"_ typically occurs when trying to access a property of an element that either doesn't exist or hasn't been loaded in the DOM yet.
-I Changed this part of the code:
+- I found an error in the console when the user just enter in the main page. _"Cannot read properties of null (reading 'style'),"_ typically occurs when trying to access a property of an element that either doesn't exist or hasn't been loaded in the DOM yet. In order to fix this problem:
+
+- I Changed this part of the code:
 ![BUG](/media/debugging1.png)
-and replace it for this one: 
+
+- and replace it for this one: 
 ![DEBUG](/media/debugging2.png)
 
 ## DEPLOYMENT
