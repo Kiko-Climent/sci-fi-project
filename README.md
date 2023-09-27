@@ -111,14 +111,17 @@ The Sci-Fi & Movies game is divided into 2 pages:
 - Concerning the warnings from _JShint_, first two might happen cause Jshint doesnt understand es7.
 - The third one couldn't get rid of it even i moved both functions (_incrementScore_ and _incrementIncorrect_) outside the _loop_.
 - Regarding the three unused variables, if i delete them the page doesnt work how it should. They are called from the HTML file.
-- I found this warning in the live version of the site: ![WARNING](/media/debugging3.png) , but after doing some research i found this ![Google Abandons FLOC](https://www.theverge.com/2022/1/25/22900567/google-floc-abandon-topics-api-cookies-tracking)
+- I found this warning in the live version of the site:
+![WARNING](/media/debugging3.png)
+- After doing some research i found this:
+![Google Abandons FLOC](https://www.theverge.com/2022/1/25/22900567/google-floc-abandon-topics-api-cookies-tracking)
 
 ### Solved Bugs
 - I found an error in the console when the user just enter in the main page. _"Cannot read properties of null (reading 'style'),"_ typically occurs when trying to access a property of an element that either doesn't exist or hasn't been loaded in the DOM yet.
-I Changed this part of the code ![BUG](/media/debugging1.png)
-and replace it for this one ![DEBUG](/media/debugging2.png)
-
-
+I Changed this part of the code:
+![BUG](/media/debugging1.png)
+and replace it for this one: 
+![DEBUG](/media/debugging2.png)
 
 ## DEPLOYMENT
 
