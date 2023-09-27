@@ -24,21 +24,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // Get the game form and add an event on submit
     let gameForm = document.getElementById("gameForm");
     if (gameForm) {
-    gameForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        // Get username
-        let userName = document.getElementById("user-name").value;
-        // Bring username to URL
-        window.location.href = `game.html?username=${userName}`;
-    });
-    // Hide questions
-    for (let i = 2; i <= 10; i++) {
-        let questionElement = document.getElementById(`question${i}`);
-        if (questionElement) {
-            questionElement.style.display = "none";
+        gameForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            // Get username
+            let userName = document.getElementById("user-name").value;
+            // Bring username to URL
+            window.location.href = `game.html?username=${userName}`;
+        });
+        // Hide questions
+        for (let i = 2; i <= 10; i++) {
+            let questionElement = document.getElementById(`question${i}`);
+            if (questionElement) {
+                questionElement.style.display = "none";
+            }
         }
-    }    
-    }    
+    }
 });
 // Custom Welcome Alert
 function customAlert(message, color) {

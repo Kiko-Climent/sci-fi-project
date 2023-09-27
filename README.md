@@ -78,6 +78,7 @@ The Sci-Fi & Movies game is divided into 2 pages:
 - [Google Dev Tools](https://developers.google.com/web/tools) - To troubleshoot and test features, solve issues with responsiveness and styling.
 - [Techsini](https://techsini.com/multi-mockup/index.php) - To show the website image on a range of devices.
 - [iloveimg](https://www.iloveimg.com/es) - To resize images and convert to jpg format.
+- [ChatGPT](https://chat.openai.com/) - To help with debugging.
 
 
 ## TESTING
@@ -88,7 +89,7 @@ The Sci-Fi & Movies game is divided into 2 pages:
 
 - CSS: No errors were found after passing through the official [Jigsaw Validator](http://jigsaw.w3.org/css-validator/validator?lang=es&profile=css3svg&uri=https%3A%2F%2Fkiko-climent.github.io%2Fsci-fi-project%2F&usermedium=all&vextwarning=&warning=1)
 
-- JAVASCRIPT: Passing through offical [JSHint]()
+- JAVASCRIPT: Passing through offical [JSHint](https://jshint.com/)
     - These are the metrics:
         - There are 14 functions in this file.
         - Function with the largest signature take 2 arguments, while the median is 0.5.
@@ -103,13 +104,21 @@ The Sci-Fi & Movies game is divided into 2 pages:
         - showFinalResult
         - next   
 
-- LIGHTHOUSE: Accesibility was also checked on [Lighhouse](/media/lighhouse.validator.png)
+- LIGHTHOUSE: Accesibility was also checked on [Lighhouse](/media/lighthouse.validator.png)
 
 ### Unfixed Bugs
 
 - Concerning the warnings from _JShint_, first two might happen cause Jshint doesnt understand es7.
 - The third one couldn't get rid of it even i moved both functions (_incrementScore_ and _incrementIncorrect_) outside the _loop_.
 - Regarding the three unused variables, if i delete them the page doesnt work how it should. They are called from the HTML file.
+- I found this warning in the live version of the site: ![WARNING](/media/debugging3.png) , but after doing some research i found this ![Google Abandons FLOC](https://www.theverge.com/2022/1/25/22900567/google-floc-abandon-topics-api-cookies-tracking)
+
+### Solved Bugs
+- I found an error in the console when the user just enter in the main page. _"Cannot read properties of null (reading 'style'),"_ typically occurs when trying to access a property of an element that either doesn't exist or hasn't been loaded in the DOM yet.
+I Changed this part of the code ![BUG](/media/debugging1.png)
+and replace it for this one ![DEBUG](/media/debugging2.png)
+
+
 
 ## DEPLOYMENT
 
@@ -119,7 +128,7 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
   - From the source section drop-down menu, select the Master Branch
   - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-  - The live link can be found here - 
+  - The live link can be found here - https://kiko-climent.github.io/sci-fi-project/
 
 ## CREDITS
 
@@ -131,6 +140,9 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
   - Quote in the _Footer_ taken from _"Star Wars"_
 
   - The idea of the _Score Box_ in the _Game Page_ was taken from the _"Love Maths Project"_ from Code Institute.
+
+  - The steps to follow for deployment were taken from the _"Love Maths Project"_ from Code Institute.
+
 
 ### Media
   - Concerning the pictures, they were taking from different resources:
