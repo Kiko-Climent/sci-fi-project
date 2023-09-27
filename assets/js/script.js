@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Bring username to URL
         window.location.href = `game.html?username=${userName}`;
     });
+
     // Hide questions
     for (let i = 2; i <= 10; i++) {
         document.getElementById(`question${i}`).style.display = "none";
@@ -58,7 +59,7 @@ function customAlert(message, color) {
 
     document.body.appendChild(alertContainer);
 
-    // Alert disapear after 3 seconds
+    // Alert disappears after 3 seconds
     setTimeout(function () {
         alertContainer.style.opacity = "0";
         setTimeout(function () {
@@ -66,6 +67,7 @@ function customAlert(message, color) {
         }, 1000);
     }, 3000);
 }
+
 // Add variable to count the amount of correct answers
 let selectedOptions = 0;
 

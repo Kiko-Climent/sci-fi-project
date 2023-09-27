@@ -70,7 +70,32 @@ The Sci-Fi & Movies game is divided into 2 pages:
 
 ### Validaor Testing
 
+- HTML: No errors were found after passing through the official [W3C Validator](/media/html.valdator.png)
+
+- CSS: No errors were found after passing through the official [Jigsaw Validator](http://jigsaw.w3.org/css-validator/validator?lang=es&profile=css3svg&uri=https%3A%2F%2Fkiko-climent.github.io%2Fsci-fi-project%2F&usermedium=all&vextwarning=&warning=1)
+
+- JAVASCRIPT: Passing through offical [JSHint]()
+    - These are the metrics:
+        - There are 14 functions in this file.
+        - Function with the largest signature take 2 arguments, while the median is 0.5.
+        - Largest function has 15 statements in it, while the median is 3.
+        - The most complex function has a cyclomatic complexity value of 7 while the median is 1.
+    - Found some warnings:
+        - 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+        - 'template literal syntax' is only available in ES6 (use 'esversion: 6'). 
+        - Functions declared within loops referencing an outer scoped variable may lead to confusing semantics. (incrementScore, incrementIncorrect)
+    - Three unused variables:
+        - selectAnswer
+        - showFinalResult
+        - next   
+
+- LIGHTHOUSE: Accesibility was also checked on [Lighhouse](/media/lighhouse.validator.png)
+
 ### Unfixed Bugs
+
+- Concerning the warnings from _JShint_, first two might happen cause Jshint doesnt understand es7.
+- The third one couldn't get rid of it even i moved both functions (_incrementScore_ and _incrementIncorrect_) outside the _loop_.
+- Regarding the three unused variables, if i delete them the page doesnt work how it should. They are called from the HTML file.
 
 ## DEPLOYMENT
 

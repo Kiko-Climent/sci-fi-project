@@ -6,21 +6,18 @@
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 2px;
 }
-
+/* Header styles */
 header>a {
         text-decoration: none;
         color: #000;
         font-weight: bolder;
-
 }
-/* add some space to make breath the texts */
+/* Body styles */
 body {
     line-height: 1.5;
     background-color: #f5f2f4;
 }
-
-
-/* Add style to heading and logo*/
+/* Heading and Logo styles */
 .heading {
     text-align: center;
     font-size: 2.5rem;
@@ -33,7 +30,7 @@ body {
     height: 40px;
     padding-right: 5px;
 }
-/* Add style to subheading */
+/* Subheading styles */
 .sub-heading {
     text-align: center;
     font-size: 1.5rem;
@@ -42,6 +39,7 @@ body {
     justify-content: center; 
     margin-bottom: 10px;
 }
+/* Log In styles */
 .log-in {
     width: 100%;
     position: relative;
@@ -52,6 +50,7 @@ body {
     height: auto;
 
 }
+/* Game form styles */
 #gameForm {
     position: absolute; 
     top: 50%; 
@@ -82,14 +81,15 @@ body {
     border: 2px solid #000; 
     width: 200px;
 }
+/* Footer styles*/
 footer {
     text-align: center;
     position: absolute;
     align-items: center;
     width: 100%;
 }
-
 /* style to game page */
+/* Scorebox style */
 .score-box {
     display: block;
     margin: 10px auto;
@@ -105,34 +105,31 @@ footer {
 #incorrect {
     color: #f44336;
 }
-
+/* Quiz styles */
 .quiz {
     flex-direction: column;
     text-align: center;
     margin-top: 7px;
-    display: none;
-   
+    display: none;  
 }
 .quiz-img{
     width: 1000px;
     height: 563px;
 }
-
 .quiz.show {
     display: block;
 }
+/* Answer option styles */
 .answer-option:hover {
     background-color:#469bba;
 }
-
 .answer-option {
     border: 2px solid #ccc;
     margin: 10px;
     padding: 10px;
     cursor: pointer;
 }
-
-/* style question buttons */
+/* Question buttons styles */
 .check-button {
     font-weight: bold;
     padding: 2px;
@@ -141,12 +138,13 @@ footer {
     font-size: medium;
     background-color: #f44336;
 }
+/* Next button styles */
 .next-button {
     padding: 2px;
     font-weight: bold;
     background-color: #4caf50;
 }
-
+/* Result box styles */
 .result-box {
     display: none;
     margin: 10px auto;
@@ -155,10 +153,7 @@ footer {
     text-align: center;
     font-weight: bold;
 }
-.final-result {
-
-}
-/* style the restart link */
+/* Restart link styles */
 #restart {
     text-decoration: none;
     color: #000;
@@ -168,21 +163,17 @@ footer {
     padding-left : 2px;
     padding-right: 2px;
 }
-
-/* change options color if selected, correct, incorrect */
+/* Change options color if selected, correct, incorrect */
 .answer-option.selected {
     background-color:#469bba;
 }
-
 .answer-option.correct {
     background-color: #4caf50;
 }
-
 .answer-option.incorrect {
     background-color: #f44336;
 }
-
-/* add styles to smaller devices */
+/* Styles to smaller devices */
 
 @media only screen and (max-width: 600px) {
     .heading {
@@ -206,41 +197,33 @@ footer {
         font-weight: bold; 
         font-size:small
     }
-    
     #gameForm input {
         font-weight: bold; 
         font-size:small; 
         border: 2px solid #000; 
         width: 100px;
-
     }
-    
     /* style game page for mobile devices */
     .quiz-img {
         width: 75%;
         height: 75%;
     }
-
     .answer-option {
         font-size: 0.9rem;
         margin: 5px;
     }
-
     .check-button {
         font-size: 1rem;
         padding: 8px 16px;
     }
-
     .result-box {
         font-size: 1rem;
         padding: 10px;
     }
-
     .final-result {
         margin-top: 10px;
     }
 }
-
 /* add style for medium devices */
 
 @media only screen and (max-width: 1000px) {
