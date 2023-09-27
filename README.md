@@ -50,7 +50,18 @@ The Sci-Fi & Movies game is divided into 2 pages:
         ![Check-Box]()
         ![Question Answered]()
         
-        - 
+        - The last button, __"Show Result"__, The final result will only become visible once we reach the last question of the quiz, and this option will only be activated after we've answered that question. Clicking on it will reveal our ultimate outcome at the bottom of the page
+    
+    - __Final Result Box__
+        - At this point, the game will have come to an end, and a panel will be displayed showing the player's name, the final evaluation taking into account the number of correct and incorrect answers, and a __"Try Again"__ button, giving us the possibility to restart the game again.
+
+        - The evaluation will be as follows considering the number of correct answers:
+
+            - 10: _You are a master in Sci-Fi_
+            - between 9 and 5: _You know a lot about Sci-Fi_
+            - less than 5: _You should watch more Sci-Fi dude_
+            - 0 : _Definitely Sci-Fi is not for you_
+        ![Final Result]()
 
 ## TESTING
 
@@ -60,9 +71,43 @@ The Sci-Fi & Movies game is divided into 2 pages:
 
 ## DEPLOYMENT
 
+The site was deployed to GitHub pages. The steps to deploy are as follows: 
+
+  - In the GitHub repository, navigate to the Settings tab 
+  - From the source section drop-down menu, select the Master Branch
+  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+
+  - The live link can be found here - 
+
 ## CREDITS
 
 ### Content
+  - I visited several websites to gather inspiration for crafting the questions and answers, but all the texts were written by myself.
+  
+  - _Hal-9000_ favicon and _Star Trek_ icon in the header both were taken from [icons8](https://icons8.de/)
+
 
 ### Media
-    
+  - Concerning the pictures, they were taking from different resources:
+
+    - Space station picture in the _Log In_ page was taken from: [National Air and Space Museum](https://airandspace.si.edu/multimedia-gallery/2001-space-stationjpg ) 
+
+    - 2001: Space Odissey's picture in question 1 was taken from: [The New York Times](https://www.nytimes.com/2020/01/23/arts/design/kubrick-2001-museum-moving-image.html)
+
+    - Blade Runner poster in question 2 was taken from: [Heise Online](https://www.heise.de/news/Blade-Runner-Das-Kult-Desaster-3848048.html)
+
+    - Alien making of picture in question 3 was taken from: [Premium Beat](https://www.premiumbeat.com/blog/filmmaking-lessons-making-of-alien/)
+
+    - Twelve Monkeys picture in question 4 was taken from: [Tilt Magazine](https://tilt.goombastomp.com/film/terry-gilliams-12-monkeys-is-more-relevant-than-ever/)
+
+    - Arrival picture in question 5 was taken from: [Astron Alpha](https://www.astronalpha.de/filme/arrival/)
+
+    - Akira poster picture in question 6 was taken from: [Crunchyroll](https://www.crunchyroll.com/de/series/GRQWJWPGR/akira)
+
+    - X-Files picture in question 7 was taken from: [20 minutos magazine](https://www.20minutos.es/cinemania/series/expediente-x-guia-mejores-episodios-mulder-scully-155299/)
+
+    - Interestellar picture in question 8 was taken from: [Den of Geek](https://www.denofgeek.com/movies/christopher-nolans-interstellar-a-secular-end-times-myth/)
+
+    - Under the Skin poster in question 9 was taken from: [Xataka](https://www.xataka.com/cine-y-tv/under-the-skin-impresionante-experiencia-sensorial-ciencia-ficcion-terror-que-llega-a-nuestras-pantallas-siete-anos-tarde)
+
+    - Ex-Machina picture in question 10 was taken from: [Süddeutsche Zeitung](https://www.sueddeutsche.de/kultur/kino-traumfrau-gebaut-1.2445461)

@@ -70,9 +70,6 @@ function customAlert(message, color) {
         }, 1000);
     }, 3000);
 }
-
-
-
 // Add variable to count the amount of correct answers
 let selectedOptions = 0;
 
