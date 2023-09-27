@@ -34,10 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // Bring username to URL
         window.location.href = `game.html?username=${userName}`;
     });
-
-    // Add function to see the next question only when the previous one is answered
-    let currentQuestion = 1;
-
     // Hide questions
     for (let i = 2; i <= 10; i++) {
         document.getElementById(`question${i}`).style.display = "none";

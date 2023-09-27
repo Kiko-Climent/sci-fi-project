@@ -5,7 +5,7 @@
 
 ### Typography
 To suit the page for a space-themed character, I've opted for the **Orbitron** typeface. It's a family of geometric and futuristic sans-serif fonts that bear resemblance to Eurostyle or Microgramma (the font used in the movie _2001: A Space Odyssey_), which is, in my opinion, the most influential science fiction film in history.
-! [Typograph](/media/sci.fi.typo.png)
+![Typography](/media/sci.fi.typo.png)
 
 ## FEATURES
 The Sci-Fi & Movies game is divided into 2 pages:
@@ -27,12 +27,13 @@ The Sci-Fi & Movies game is divided into 2 pages:
 
     - __The Footer__
         - In the footer, I've included an iconic quote from the history of Sci-Fi Movies, sourced from _Star Wars_, to inspire and extend my best wishes to the user for the game ahead.
-        ![Footer]()
+        ![Footer](/media/footer.png)
 
--__THE GAME PAGE__
+- __THE GAME PAGE__
+
     - __The Score Box__
         - Right below the logo and the header, the user will find a panel where the previously chosen __"Player"__ will be displayed, along with a scoreboard that will keep track of the __"Correct"__ and __"Incorrect"__ answers. This counter will change as the questions are answered, with the correct ones marked in _green_ and the _incorrect_ ones in red.
-        ![Score-Box]()
+        ![Score-Box](/media/score.box.png)
     
     - __The Quiz Game Section__
         - Right after logging in on the main page, upon accessing the __Game Page__, an _alert_ once again wishes the user good luck before starting the quiz game.
@@ -40,17 +41,18 @@ The Sci-Fi & Movies game is divided into 2 pages:
 
         - The Quiz Game consists of 10 questions related to various details about 10 iconic science fiction movies. Each question contains 4 possible answers, of which only one is correct.
         
-        When the user hovers the mouse over the different options, they light up in blue. Once the user has considered the options, with a click, they can select only one of them, which is then marked with the same blue color.
-        ![Quiz]()
+        - When the user hovers the mouse over the different options, they light up in blue. Once the user has considered the options, with a click, they can select only one of them, which is then marked with the same blue color.
+        ![Quiz](/media/quiz.png)
 
     - __The Check Box__
         - Here the user will find 3 buttons. The first one is the __"Check"__ button to verify if the previously selected option is _correct_ or _incorrect_. Upon clicking the button, it will light up in _green_ if the answer is correct. If the user's selected option is incorrect, it will be colored in _red_, and the correct answer will be revealed, illuminated in green.
 
         - The second button, __"Next!"__, will only be accessible once the user has answered the question. After answering, this button will become enabled to proceed with the next question of the game.
-        ![Check-Box]()
-        ![Question Answered]()
+        ![Check-Box](/media/check.box.png)
+        ![Question Answered](/media/question.answered.png)
         
         - The last button, __"Show Result"__, The final result will only become visible once we reach the last question of the quiz, and this option will only be activated after we've answered that question. Clicking on it will reveal our ultimate outcome at the bottom of the page
+        ![Show Result](/media/show.result.png)
     
     - __Final Result Box__
         - At this point, the game will have come to an end, and a panel will be displayed showing the player's name, the final evaluation taking into account the number of correct and incorrect answers, and a __"Try Again"__ button, giving us the possibility to restart the game again.
@@ -61,7 +63,7 @@ The Sci-Fi & Movies game is divided into 2 pages:
             - between 9 and 5: _You know a lot about Sci-Fi_
             - less than 5: _You should watch more Sci-Fi dude_
             - 0 : _Definitely Sci-Fi is not for you_
-        ![Final Result]()
+        ![Final Result](/media/result.box.png)
 
 ## TESTING
 
@@ -86,6 +88,9 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
   
   - _Hal-9000_ favicon and _Star Trek_ icon in the header both were taken from [icons8](https://icons8.de/)
 
+  - Quote in the _Footer_ taken from _"Star Wars"_
+
+  - The idea of the _Score Box_ in the _Game Page_ was taken from the _"Love Maths Project"_ from Code Institute.
 
 ### Media
   - Concerning the pictures, they were taking from different resources:
