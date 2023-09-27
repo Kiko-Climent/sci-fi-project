@@ -66,6 +66,20 @@ The Sci-Fi & Movies game is divided into 2 pages:
             - 0 : _Definitely Sci-Fi is not for you_
         ![Final Result](/media/result.box.png)
 
+## TECHNOLOGIES USED
+
+### Languages used
+- HTML, CSS and JavaScript.
+
+### Programs used
+- [Visual Studio Code](https://code.visualstudio.com/) - IDE used to create the site.
+- [Github](https://github.com/) - To save and store the files for the website.
+- [Google Fonts](https://fonts.google.com/) - To import the fonts used on the website.
+- [Google Dev Tools](https://developers.google.com/web/tools) - To troubleshoot and test features, solve issues with responsiveness and styling.
+- [Techsini](https://techsini.com/multi-mockup/index.php) - To show the website image on a range of devices.
+- [iloveimg](https://www.iloveimg.com/es) - To resize images and convert to jpg format.
+
+
 ## TESTING
 
 ### Validaor Testing
