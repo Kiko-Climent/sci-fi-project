@@ -1,5 +1,6 @@
 # SCI-FI & MOVIES
 **Sci-Fi & Movies** is a website that engages users by testing their knowledge of some of the most iconic science fiction films. Not only are fans of this subgenre welcome, but Sci-Fi & Movies also aims to promote this genre to expand it to other audiences, share relevant facts, and attempt to increase its viewership
+![Mock UP](/media/different.devices.png)
 
 ## DESIGN
 
